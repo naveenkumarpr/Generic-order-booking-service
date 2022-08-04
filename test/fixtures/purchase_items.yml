@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  purchase: one
+  product_code: MyString
+  product_name: MyString
+  unit_product_mrp: 1.5
+  unit_product_discount: 1.5
+  unit_product_amount: 1.5
+  total_final_amount: 1.5
+  quantity: 1
+  image: MyString
+
+two:
+  purchase: two
+  product_code: MyString
+  product_name: MyString
+  unit_product_mrp: 1.5
+  unit_product_discount: 1.5
+  unit_product_amount: 1.5
+  total_final_amount: 1.5
+  quantity: 1
+  image: MyString
