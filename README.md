@@ -1,50 +1,14 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**APIs:**
+1. Order Placement API: Given a valid payload, you would be processing this to create purchase record along with other helper records(address, purchase_items, billing & shipping address and payment methods)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-placed -> processing or cancelled
-processing -> delivered
-delivered -> returned
-
-cancelled or returned -> status changes not allowed
-payload of "status_update" API
-{
-  order_number: "XYZ",
-  status: "processing"
-}
-response: {
-  order_number: "XYZ",
-  updated_status: "processing" or nil if not updated,
-  message: "status update successful",
-  success: true or false
-}
-
-
- def validate_email
-    if self.email =~/\A([\w+\-]\.?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
-      return
-    else
-      errors.add(:email,"Invalid Email")
-    end
-  end
-end
+2. Order Status Update: It would be required to update an order's status.
+3. Order Listing API: List API of purchase records with pagination (default page size should be 10 and maximum 50). This should also support filtering options by following fields:
+start_date, end_date -> to filter out purchase records bases on its creation date.
+status -> filter based on its status.
+ search based on 'order_number' -> Exact matching using DB query.
+ 
+**Tools and Tech Stack:**
+Use Ruby, Rails and MySQL.
+Use PostMan to test and organize your APIs.
+Use GitHub for version control.
